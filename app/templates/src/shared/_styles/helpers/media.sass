@@ -1,0 +1,13 @@
+// Media queries mixins
+
+=below($width, $orientation: 'width')
+	@media all and (max-#{$orientation}: $width)
+		@content
+
+=above($width, $orientation: 'width')
+	@media all and (min-#{$orientation}: $width)
+		@content
+
+=between($minWidth, $maxWidth, $orientation: 'width')
+	@media all and (min-#{$orientation}: $minWidth) and (max-#{$orientation}: $maxWidth)
+		@content

@@ -1,0 +1,21 @@
+{<% if (jsPreprocessor === 'es6') { %>
+  "parser": "babel-eslint",<% } %>
+  "env": {
+    "browser": true,
+    "node": true<% if (jsPreprocessor === 'es6') { %>,
+    "es6": true<% } %>
+  },
+  "globals": {
+    "DocumentFragment": true<% if (testFramework !== 'none') { %>,
+    "it": true,
+    "describe": true,
+    "beforeEach": true,
+    "runs": true,
+    "spyOn": true,
+    "spyOnEvent": true,
+    "waitsFor": true,
+    "expect": true,
+    "afterEach": true<% } %>
+  },
+  "extends": "airbnb-base"
+}

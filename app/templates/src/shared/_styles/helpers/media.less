@@ -1,0 +1,22 @@
+// Media queries mixins
+
+.below(@width; @orientation; @rules) {
+	@queryString: ~"all and (max-@{orientation}: @{width})";
+	@media @queryString {
+		@rules();
+	}
+}
+
+.above(@width; @orientation; @rules) {
+	@queryString: ~"all and (min-@{orientation}: @{width})";
+	@media @queryString {
+		@rules();
+	}
+}
+
+.between(@minWidth; @maxWidth; @orientation; @rules) {
+	@queryString: ~"all and (min-@{orientation}: @{minWidth}) and (max-@{orientation}: @{maxWidth})";
+	@media @queryString {
+		@rules();
+	}
+}

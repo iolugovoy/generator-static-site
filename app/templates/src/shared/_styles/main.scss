@@ -1,0 +1,44 @@
+// Import from node_modules example
+// @import 'node_modules/normalize.css/normalize';
+
+// Import css file from node_modules example
+// @import 'node_modules/normalize.css/normalize'; // just keep without extension
+
+// Import Helpers
+@import './helpers/variables';
+@import './helpers/media';
+@import './helpers/scaffolding';
+@import './helpers/typography';
+
+// Import Modules
+@import '../_modules/link/link';
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	max-width: 300px;
+}
+
+h1 {
+	@include title-2;
+	margin-bottom: 1em;
+
+	@include above($desktop) {
+		@include title-1;
+	}
+}
+
+p {
+	@include base-text;
+}

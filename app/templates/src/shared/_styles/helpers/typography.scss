@@ -1,0 +1,26 @@
+// Typography mixins
+
+@mixin title-1() {
+	font-size: 34px;
+	line-height: 1;
+}
+
+@mixin title-2() {
+	font-size: 24px;
+	line-height: 1.3;
+}
+
+@mixin title-3() {
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+@mixin base-text() {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+@mixin secondary-text() {
+	font-size: 12px;
+	line-height: 1.5;
+}
